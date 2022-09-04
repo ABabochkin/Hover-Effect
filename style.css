@@ -1,0 +1,45 @@
+body {
+    margin: 0px; 
+    color: black;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.text {
+    text-align: center;
+    font-size: 25px;
+    user-select: none;
+    color: white;
+}
+
+.text span {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    animation: smoke 2s linear forwards;
+}
+
+@keyframes smoke {
+    20% {
+        color: rgb(128, 83, 0);
+    }
+
+    50% {
+        color: rgb(47, 0, 255)
+    }
+    100% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
